@@ -12,6 +12,6 @@ To download the data for this article first run "download_data.ipynb" in the "no
  
 ## Directories 
 
-notebooks/: Directory contains any python notebooks that were used in the process.
+notebooks/ : Directory contains any python notebooks that were used in the process.
 
-katspace/: Directory contains scripts for the code analysis.
+katspace/ : Directory contains scripts for the code analysis.
