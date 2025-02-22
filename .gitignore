@@ -1,5 +1,18 @@
+# zipped data for distribution, and test directory
+data_for_download/
+data-test/
+
+# Some local notes and the python venv
+create-tar-files.txt
+gdown.txt
+nb-venv/
+.nb-venv/
+
+# Mac OS
+*.DS_Store
+
 # Byte-compiled / optimized / DLL files
-__pycache__/
+katspace/__pycache__/
 *.py[cod]
 *$py.class
 
