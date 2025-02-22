@@ -1,7 +1,5 @@
 ## Opening Worlds: Narrative Beginnings and the Role of Setting
 
-This repo contains the source code for my dissertation.
-
 ## Installation
 
 First download or clone this repo using git: 
