@@ -5,10 +5,10 @@
 First download or clone this repo using git: 
 ```git clone https://github.com/katrinrohrb/narrative-beginnings.git```
 
-After this you can install required python packages using the following command. We reccommand running this after creating a virtual environment (needs Python <= 3.12): 
+After this you can install required python packages using the following command. We reccommand running this after creating a virtual environment, e.g. following "recreate-env.txt" (needs Python <= 3.12): 
 ```pip install -r requirements_no_deps.txt```
 
-To download the data for this article run first "download_data.ipynb" in the "notebooks" folder. 
+To download the data for this article first run "download_data.ipynb" in the "notebooks" folder. 
  
 ## Directories 
 
