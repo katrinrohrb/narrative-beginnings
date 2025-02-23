@@ -1,12 +1,10 @@
 import stanza
-#stanza.download("de")
+
 from stanza import Document
 import re
-#import sys
-#import importlib
+
 import pandas as pd
-#import random
-#import glob
+
 import os
 import time
 from pathlib import Path
@@ -24,22 +22,6 @@ import seaborn as sns
 
 # create logger
 logger = logging.getLogger('katspace.core')
-#logger.setLevel(logging.DEBUG)
-
-# create console handler and set level to debug
-#ch = logging.StreamHandler()
-#ch.setLevel(logging.DEBUG)
-
-# create formatter
-#formatter = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s')
-
-# add formatter to ch
-#ch.setFormatter(formatter)
-
-# add ch to logger
-#logger.addHandler(ch)
-
-# 'application' code
 
 logger.debug(str(__file__))
 
@@ -112,16 +94,6 @@ def results_from_json(filename, results_dir):
   with Path(results_dir,filename).open('r', encoding="utf-8") as f:
     json_results = json.load(f)
     return json_results
-
-#def results_from_json_deprecated(filename):
-    json_file_path = Path(results_dir, Path(filename).stem + '-result.json')
-
-    if json_file_path.exists():
-        with open(json_file_path, 'r', encoding="utf-8") as f:
-            json_results = json.load(f)
-        return json_results
-    else:
-        return None
     
 class Text:
   pickle_dir_tokenized = "Datasets/pickle/tokenized_sents/"
@@ -226,16 +198,6 @@ class Text:
   @classmethod
   def load_txt_file(cls, filename, txt_dirs = None, results_dirs = None):
     logger.debug(f"load_txt_file(filename = {filename}, txt_dirs = {txt_dirs}, results_dir = {results_dirs})")
-    #path = Path(filename)
-    #if path.exists():
-      #dir = path.parent
-      #if dir in katspace.session.config["results_dir_dict"].keys():
-        #results_dir = katspace.session.config["results_dir_dict"][dir]
-      #else: 
-        #raise RuntimeError("Not implemented. Should search through results_dirs.")
-    #else:
-      #dir = Text.find_file(filename, txt_dirs)
-      #logger.debug(f"Text.find_txt_file returns: {dir}")
     return Text(filename = filename, txt_dirs = txt_dirs, results_dirs = results_dirs)
   
        
@@ -277,10 +239,8 @@ class Text:
         color_sent = space_types2colors[space_type]
         sentences[i - start_i] =   COLORS[color_sent] + f"<{space_type.rstrip('_space')}> " + \
                                             sentences[i - start_i] \
-                                        + f" <\{space_type.rstrip('_space')}> " + COLORS["black"]
-        #self.is_colored[i] = True    
-    #else:
-      #raise("This is not how you use this class!")
+                                        + f" <\\{space_type.rstrip('_space')}> " + COLORS["black"]
+
     if output_string:
       if color:
         return " ".join([ sent for sent in sentences])
