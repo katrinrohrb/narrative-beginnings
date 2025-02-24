@@ -311,7 +311,6 @@ class Text:
     dict = {"text": [sent.text for sent in self.sents_by_index(id_start, id_end)]}
     return Dataset.from_pandas(pd.DataFrame(dict))
 
-#corpus dir was lost but probably datasets/txt
 class Corpus:
   def __init__(self, drive_dir = None, corpus_dir_rel = ""):
     if drive_dir == None: 
